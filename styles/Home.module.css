@@ -1,15 +1,79 @@
 .container {
   padding: 0 2rem;
+  background-color: #0A0927;
+  color: #ffffff;
+  background-image: url("/bg-main.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  
+}
+
+.container a {
+  text-decoration: underline;
+  color:#ffffff;
 }
 
 .main {
   min-height: 100vh;
   padding: 4rem 0;
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  row-gap: 2rem;
+  
+  margin-left: 3rem;
+}
+
+
+
+.content{
+  display: flex;
+  flex-direction: row;
   align-items: center;
+}
+
+.contentArea{
+  width: 50vw;
+}
+
+.formArea{
+  width: 30vw;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loadingSpinner {
+  width: 50px;
+  height: 50px;
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #383636; /* Black */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+.spinnerContainer{ 
+  margin-left: 1rem;
+}
+
+.form {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  border-radius: 8px;
+  border: 1px solid rgba(245, 161, 26, 0.2);
+}
+
+.label{
+  color: #ffffff !important;
+  font-size: 1.175rem !important;
+}
+
+.buttonBar{
+  display: flex;
+  justify-content: center;
 }
 
 .footer {
@@ -42,18 +106,18 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .title,
 .description {
-  text-align: center;
+  text-align: left;
 }
 
 .description {
-  margin: 4rem 0;
+  margin: 1rem 0;
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
 }
 
 .code {
@@ -108,9 +172,46 @@
   margin-left: 0.5rem;
 }
 
+
+.lastYear {
+  width: 366px;
+  margin: auto 0;
+}
+
+.buttonsGroup {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1.188rem;
+}
+
+.buttonSTD {
+  height: 65px;
+  color: #ffffff;
+  background: #25B72B;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  line-height: 65px;
+  text-decoration: none !important;
+  background-image: url("/icon-calendar.png");
+  background-repeat: no-repeat;
+  background-position: 20px 10px;
+  padding: 0 25px 0 80px;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttonSignUp:disabled{
+  cursor: not-allowed;
 }
